@@ -1,0 +1,31 @@
+<p>sidebar works!</p>
+ <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="user-profile">
+                            <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><img src="./assets/images/users/alan.jpg" alt="user" /><span class="hide-menu">Alan Mejía </span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void()">Mi perfil </a></li>
+                                <li><a href="javascript:void()">Mensajes</a></li>
+                                <li><a href="javascript:void()">Configuración</a></li>
+                                <li><a [routerLink]="['/login']">Salir</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-devider"></li>
+                        <li><a [routerLink]="['/wizard']">Formulario por pasos</a></li>
+                        <li><a [routerLink]="['/generatePDF']">Generar PDF</a></li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->

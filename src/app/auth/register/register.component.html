@@ -1,0 +1,59 @@
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <section id="wrapper" class="login-register login-sidebar" style="background-image:url(../assets/images/background/bg-field.jpg);">
+        <div class="login-box card">
+            <div class="card-body">
+                <a href="javascript:void(0)" class="text-center db"><img src="../assets/images/logo-fmf-142x180.png" alt="Home" /><br/></a>
+                <h3 class="text-center db mt-4">Registro</h3>
+
+                <!-- <button mat-raised-button (click)="isOptional = !isOptional">
+                  {{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}
+                </button> -->
+                
+                <mat-stepper linear #stepper orientation="vertical">
+                  <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                      <ng-template matStepLabel>Datos personales</ng-template>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput placeholder="Nombre" formControlName="firstNameCtrl" required>
+                      </mat-form-field>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Apellidos</mat-label>
+                        <input matInput placeholder="Apellidos" formControlName="lastNameCtrl" required>
+                      </mat-form-field>
+                      <div>
+                        <button mat-button matStepperNext>Siguiente</button>
+                      </div>
+                    </form>
+                  </mat-step>
+                  <mat-step [stepControl]="secondFormGroup" [optional]="isOptional">
+                    <form [formGroup]="secondFormGroup">
+                      <ng-template matStepLabel>Dirección</ng-template>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Dirección</mat-label>
+                        <input matInput formControlName="addressCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                               required>
+                      </mat-form-field>
+                      <div>
+                        <button mat-button matStepperPrevious>Atrás</button>
+                        <button mat-button matStepperNext>Siguiente</button>
+                      </div>
+                    </form>
+                  </mat-step>
+                  <mat-step>
+                    <ng-template matStepLabel>¡Registro completado!</ng-template>
+                    <p>Tu registro ha sido completado.</p>
+                    <div>
+                      <button mat-button matStepperPrevious>Atrás</button>
+                      <button mat-button [routerLink]="['/home']">Ingresar</button>
+                    </div>
+                  </mat-step>
+                </mat-stepper>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
